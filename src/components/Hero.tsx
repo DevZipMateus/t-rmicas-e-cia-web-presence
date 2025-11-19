@@ -17,7 +17,7 @@ const Hero = () => {
       ></div>
 
       <div className="container mx-auto px-4 py-20 relative z-10">
-        <div className="max-w-4xl mx-auto text-center text-white">
+        <div className="max-w-4xl mx-auto text-center text-white bg-black/40 backdrop-blur-sm rounded-3xl p-12 md:p-16">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
             TÉRMICAS E CIA
           </h1>
