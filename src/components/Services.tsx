@@ -1,5 +1,9 @@
 import { Gift, Palette, Users, Sparkles } from "lucide-react";
 import servicesImg from "@/assets/services-img.jpg";
+import serviceEngraving from "@/assets/service-engraving.jpg";
+import serviceGiftbox from "@/assets/service-giftbox.jpg";
+import serviceDesign from "@/assets/service-design.jpg";
+import serviceDelivery from "@/assets/service-delivery.jpg";
 
 const Services = () => {
   const services = [
@@ -7,21 +11,25 @@ const Services = () => {
       icon: Gift,
       title: "Brindes personalizados",
       description: "Produtos exclusivos com a identidade da sua marca, desde canecas térmicas até kits corporativos completos.",
+      image: serviceGiftbox,
     },
     {
       icon: Palette,
       title: "Design customizado",
       description: "Criação de layouts únicos e personalizados que refletem os valores e a essência da sua empresa.",
+      image: serviceDesign,
     },
     {
       icon: Users,
       title: "Consultoria personalizada",
       description: "Atendimento próximo e consultivo para entender suas necessidades e sugerir as melhores soluções.",
+      image: serviceDelivery,
     },
     {
       icon: Sparkles,
       title: "Produtos de qualidade",
       description: "Seleção rigorosa de materiais e fornecedores para garantir produtos duráveis e de alta qualidade.",
+      image: serviceEngraving,
     },
   ];
 
@@ -43,17 +51,26 @@ const Services = () => {
               {services.map((service, index) => (
                 <div
                   key={index}
-                  className="bg-card rounded-xl p-6 border border-border hover:border-primary transition-all hover:shadow-lg"
+                  className="bg-card rounded-xl overflow-hidden border border-border hover:border-primary transition-all hover:shadow-lg group"
                 >
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                    <service.icon className="text-primary" size={24} />
+                  <div className="h-48 overflow-hidden">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
                   </div>
-                  <h3 className="text-lg font-bold text-card-foreground mb-2">
-                    {service.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {service.description}
-                  </p>
+                  <div className="p-6">
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                      <service.icon className="text-primary" size={24} />
+                    </div>
+                    <h3 className="text-lg font-bold text-card-foreground mb-2">
+                      {service.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {service.description}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
