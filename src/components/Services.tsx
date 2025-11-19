@@ -2,7 +2,7 @@ import { Gift, Palette, Users, Sparkles } from "lucide-react";
 import servicesImg from "@/assets/servicos-principal.jpg";
 import serviceEngraving from "@/assets/servico-personalizacao.jpg";
 import serviceGiftbox from "@/assets/servico-kits.jpg";
-import serviceDesign from "@/assets/servico-design.jpg";
+import serviceDesign from "@/assets/servico-design-v2.jpg";
 import serviceDelivery from "@/assets/servico-consultoria.jpg";
 
 const Services = () => {
