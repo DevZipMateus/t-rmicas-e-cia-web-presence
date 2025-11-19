@@ -1,4 +1,5 @@
 import { Eye, Target, Heart } from "lucide-react";
+import aboutWorkplace from "@/assets/about-workplace.jpg";
 
 const About = () => {
   return (
@@ -11,6 +12,17 @@ const About = () => {
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Conheça nossa visão, missão e valores que guiam nosso trabalho
           </p>
+        </div>
+
+        {/* Image Section */}
+        <div className="max-w-4xl mx-auto mb-16">
+          <div className="rounded-2xl overflow-hidden shadow-xl">
+            <img
+              src={aboutWorkplace}
+              alt="Brindes corporativos TÉRMICAS E CIA em ambiente de trabalho"
+              className="w-full h-auto object-cover"
+            />
+          </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
