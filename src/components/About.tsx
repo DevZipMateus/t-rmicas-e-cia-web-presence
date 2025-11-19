@@ -1,5 +1,5 @@
 import { Eye, Target, Heart } from "lucide-react";
-import aboutWorkplace from "@/assets/sobre-empresa.jpg";
+import aboutWorkplace from "@/assets/sobre-produtos.jpg";
 
 const About = () => {
   return (
