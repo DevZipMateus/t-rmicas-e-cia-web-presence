@@ -8,13 +8,19 @@ const Hero = () => {
       className="relative min-h-screen flex items-center justify-center pt-20"
     >
       <div
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 bg-cover bg-center sm:bg-center md:bg-center"
         style={{
           backgroundImage: `url(${heroBanner})`,
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: "center center",
         }}
-      ></div>
+      >
+        <img 
+          src={heroBanner} 
+          alt="Produtos TÉRMICAS E CIA - garrafas térmicas e copos personalizados" 
+          className="w-full h-full object-cover object-center"
+        />
+      </div>
 
       <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20 relative z-10">
         <div className="max-w-4xl mx-auto text-center text-white bg-black/40 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-10 md:p-12 lg:p-16">
