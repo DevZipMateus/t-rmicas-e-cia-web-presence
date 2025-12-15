@@ -5,20 +5,13 @@ const Hero = () => {
   return (
     <section
       id="inicio"
-      className="relative min-h-screen flex items-center justify-center pt-20"
+      className="relative min-h-[60vh] md:min-h-[70vh] lg:min-h-[80vh] flex items-center justify-center pt-20 bg-primary"
     >
-      <div
-        className="absolute inset-0 z-0 bg-cover bg-center sm:bg-center md:bg-center"
-        style={{
-          backgroundImage: `url(${heroBanner})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center center",
-        }}
-      >
+      <div className="absolute inset-0 z-0 flex items-center justify-center">
         <img 
           src={heroBanner} 
           alt="Produtos TÉRMICAS E CIA - garrafas térmicas e copos personalizados" 
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-contain"
         />
       </div>
 
