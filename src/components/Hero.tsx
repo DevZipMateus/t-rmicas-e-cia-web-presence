@@ -1,5 +1,5 @@
 import { MessageCircle } from "lucide-react";
-import heroBanner from "@/assets/sobre-produtos.jpg";
+import heroBanner from "@/assets/sobre-produtos-novo.jpg";
 
 const Hero = () => {
   return (
