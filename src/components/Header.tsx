@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -31,11 +32,8 @@ const Header = () => {
       }`}
     >
       <nav className="container mx-auto px-4 h-20 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-gradient-accent rounded-lg flex items-center justify-center text-white font-bold text-lg">
-            T&C
-          </div>
-          <span className="text-xl font-bold text-foreground">TÉRMICAS E CIA</span>
+        <div className="flex items-center">
+          <img src={logo} alt="Térmicas & Cia" className="h-14 w-auto" />
         </div>
 
         {/* Desktop Menu */}
