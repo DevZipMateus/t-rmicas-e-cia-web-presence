@@ -1,4 +1,5 @@
 import { Phone, Mail, Clock, MapPin, Instagram } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   const scrollToSection = (id: string) => {
@@ -17,11 +18,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
           {/* Sobre */}
           <div>
-            <div className="flex items-center gap-2 mb-3 sm:mb-4">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-accent rounded-lg flex items-center justify-center text-white font-bold text-sm sm:text-lg">
-                T&C
-              </div>
-              <span className="text-base sm:text-lg font-bold">TÉRMICAS E CIA</span>
+            <div className="flex items-center mb-3 sm:mb-4">
+              <img src={logo} alt="Térmicas & Cia" className="h-16 w-auto" />
             </div>
             <p className="text-background/80 text-xs sm:text-sm leading-relaxed">
               Brindes corporativos que unem design, utilidade e significado. A praticidade que te acompanha.
