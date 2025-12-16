@@ -42,7 +42,7 @@ const Contact = () => {
             <div className="w-10 h-10 sm:w-12 sm:h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-3 sm:mb-4">
               <Clock className="text-secondary" size={20} />
             </div>
-            <h3 className="text-base sm:text-lg font-bold text-card-foreground mb-2">Horário</h3>
+            <h3 className="text-base sm:text-lg font-bold text-card-foreground mb-2">Horário de Funcionamento</h3>
             <p className="text-xs sm:text-sm text-muted-foreground">
               Segunda a Sexta: 07:00 às 17:00
             </p>
