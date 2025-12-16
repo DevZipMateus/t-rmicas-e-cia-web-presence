@@ -27,13 +27,13 @@ const Contact = () => {
 
           <a
             href="mailto:comercial.termicasecia@gmail.com"
-            className="bg-card rounded-lg sm:rounded-xl p-5 sm:p-6 shadow-lg hover:shadow-xl transition-all hover:scale-105 group"
+            className="bg-card rounded-lg sm:rounded-xl p-5 sm:p-6 shadow-lg hover:shadow-xl transition-all hover:scale-105 group sm:col-span-2 lg:col-span-1"
           >
             <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-primary/20 transition-colors">
               <Mail className="text-primary" size={20} />
             </div>
             <h3 className="text-base sm:text-lg font-bold text-card-foreground mb-2">E-mail</h3>
-            <p className="text-xs sm:text-sm text-muted-foreground break-words">
+            <p className="text-xs sm:text-sm text-muted-foreground break-all">
               comercial.termicasecia@gmail.com
             </p>
           </a>
