@@ -33,7 +33,7 @@ const Header = () => {
     >
       <nav className="container mx-auto px-4 h-20 flex items-center justify-between">
         <div className="flex items-center">
-          <img src={logo} alt="Térmicas & Cia" className="h-14 w-auto" />
+          <img src={logo} alt="Térmicas & Cia" className="h-16 md:h-20 w-auto" />
         </div>
 
         {/* Desktop Menu */}
