@@ -1,9 +1,11 @@
+import { useEffect, useState } from "react";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  type CarouselApi,
 } from "@/components/ui/carousel";
 
 import produto1 from "@/assets/produto-1.jpg";
@@ -13,7 +15,6 @@ import produto4 from "@/assets/produto-4.jpg";
 import produto5 from "@/assets/produto-5.jpg";
 import produto6 from "@/assets/produto-6.jpg";
 import produto7 from "@/assets/produto-7.jpg";
-import produto8 from "@/assets/produto-8.jpg";
 import produto9 from "@/assets/produto-9.jpg";
 
 const products = [
@@ -24,11 +25,22 @@ const products = [
   { id: 5, image: produto5, title: "Kit Churrasco Completo" },
   { id: 6, image: produto6, title: "Kit Presente Executivo" },
   { id: 7, image: produto7, title: "Kit Sommelier" },
-  { id: 8, image: produto8, title: "Kit Degustação" },
-  { id: 9, image: produto9, title: "Kit Churrasco Premium" },
+  { id: 8, image: produto9, title: "Kit Churrasco Premium" },
 ];
 
 const Products = () => {
+  const [api, setApi] = useState<CarouselApi>();
+
+  useEffect(() => {
+    if (!api) return;
+
+    const interval = setInterval(() => {
+      api.scrollNext();
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [api]);
+
   return (
     <section id="produtos" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
@@ -42,6 +54,7 @@ const Products = () => {
         </div>
 
         <Carousel
+          setApi={setApi}
           opts={{
             align: "start",
             loop: true,
