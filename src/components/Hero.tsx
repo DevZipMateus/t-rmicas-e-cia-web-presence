@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { MessageCircle } from "lucide-react";
 
 import mosaic1 from "@/assets/mosaic-1.jpg";
@@ -8,7 +7,7 @@ import mosaic4 from "@/assets/mosaic-4.jpg";
 import mosaic5 from "@/assets/mosaic-5.jpg";
 import mosaic6 from "@/assets/mosaic-6.jpg";
 
-const heroImages = [
+const mosaicImages = [
   { src: mosaic1, alt: "Kit Gourmet Premium" },
   { src: mosaic2, alt: "Tábua e Facas Personalizadas" },
   { src: mosaic3, alt: "Copos e Garrafas Térmicas" },
@@ -18,54 +17,64 @@ const heroImages = [
 ];
 
 const Hero = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % heroImages.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <section
       id="inicio"
       className="relative min-h-[60vh] md:min-h-[70vh] lg:min-h-[80vh] flex items-center justify-center pt-20 bg-background"
     >
-      {/* Carousel Background */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
-        {heroImages.map((image, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
-              index === currentIndex ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <img
-              src={image.src}
-              alt={image.alt}
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-black/40" />
-          </div>
-        ))}
-      </div>
-
-      {/* Carousel Indicators */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
-        {heroImages.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentIndex(index)}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              index === currentIndex
-                ? "bg-white w-6"
-                : "bg-white/50 hover:bg-white/70"
-            }`}
-            aria-label={`Ir para imagem ${index + 1}`}
+      {/* Mosaic Background */}
+      <div className="absolute inset-0 z-0 grid grid-cols-2 md:grid-cols-3 grid-rows-2 gap-1 md:gap-2 p-1 md:p-2">
+        {/* Row 1 */}
+        <div className="relative overflow-hidden rounded-lg">
+          <img 
+            src={mosaicImages[0].src} 
+            alt={mosaicImages[0].alt}
+            className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
           />
-        ))}
+          <div className="absolute inset-0 bg-black/30" />
+        </div>
+        <div className="relative overflow-hidden rounded-lg md:col-span-1">
+          <img 
+            src={mosaicImages[1].src} 
+            alt={mosaicImages[1].alt}
+            className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-black/30" />
+        </div>
+        <div className="relative overflow-hidden rounded-lg hidden md:block">
+          <img 
+            src={mosaicImages[2].src} 
+            alt={mosaicImages[2].alt}
+            className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-black/30" />
+        </div>
+
+        {/* Row 2 */}
+        <div className="relative overflow-hidden rounded-lg hidden md:block">
+          <img 
+            src={mosaicImages[3].src} 
+            alt={mosaicImages[3].alt}
+            className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-black/30" />
+        </div>
+        <div className="relative overflow-hidden rounded-lg">
+          <img 
+            src={mosaicImages[4].src} 
+            alt={mosaicImages[4].alt}
+            className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-black/30" />
+        </div>
+        <div className="relative overflow-hidden rounded-lg">
+          <img 
+            src={mosaicImages[5].src} 
+            alt={mosaicImages[5].alt}
+            className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-black/30" />
+        </div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20 relative z-10">
