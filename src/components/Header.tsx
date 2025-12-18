@@ -32,9 +32,12 @@ const Header = () => {
       }`}
     >
       <nav className="container mx-auto px-4 h-20 flex items-center justify-between">
-        <div className="flex items-center">
+        <button 
+          onClick={() => scrollToSection("inicio")}
+          className="flex items-center cursor-pointer"
+        >
           <img src={logo} alt="Térmicas & Cia" className="h-16 md:h-20 w-auto" />
-        </div>
+        </button>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center gap-8">
