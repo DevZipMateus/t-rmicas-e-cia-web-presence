@@ -20,7 +20,7 @@ const Hero = () => {
   return (
     <section
       id="inicio"
-      className="relative min-h-[60vh] md:min-h-[70vh] lg:min-h-[80vh] flex items-center justify-center pt-20"
+      className="relative min-h-[60vh] md:min-h-[70vh] lg:min-h-[80vh] flex items-center justify-center pt-20 bg-background"
     >
       {/* Mosaic Background */}
       <div className="absolute inset-0 z-0 grid grid-cols-2 md:grid-cols-3 grid-rows-2 gap-1 md:gap-2 p-1 md:p-2">
