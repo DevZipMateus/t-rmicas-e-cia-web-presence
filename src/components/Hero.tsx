@@ -83,7 +83,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center animate-scale-in">
             <a
               href="https://wa.me/5517996026352"
-              className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white text-primary rounded-lg hover:bg-white/90 transition-all font-semibold text-base sm:text-lg shadow-lg hover:scale-105"
+              className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all font-semibold text-base sm:text-lg shadow-lg hover:scale-105"
             >
               <MessageCircle size={20} className="sm:w-6 sm:h-6" />
               Solicitar orçamento
