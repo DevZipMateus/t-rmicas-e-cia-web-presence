@@ -19,6 +19,11 @@ import produto9 from "@/assets/produto-9.jpg";
 import produto10 from "@/assets/produto-10.jpg";
 import produto11 from "@/assets/produto-11.jpg";
 import produto12 from "@/assets/produto-12.jpg";
+import produto13 from "@/assets/produto-13.jpg";
+import produto14 from "@/assets/produto-14.jpg";
+import produto15 from "@/assets/produto-15.jpg";
+import produto16 from "@/assets/produto-16.jpg";
+import produto17 from "@/assets/produto-17.jpg";
 
 const products = [
   { id: 1, image: produto1, title: "Caixas Térmicas Personalizadas" },
@@ -32,6 +37,11 @@ const products = [
   { id: 9, image: produto10, title: "Mesa Térmica" },
   { id: 10, image: produto11, title: "Copos e Garrafas Térmicas" },
   { id: 11, image: produto12, title: "Churrasqueira Portátil" },
+  { id: 12, image: produto13, title: "Caixa Térmica com Torneira" },
+  { id: 13, image: produto14, title: "Caixa Térmica Branca" },
+  { id: 14, image: produto15, title: "Caixa Térmica Verde" },
+  { id: 15, image: produto16, title: "Churrasqueira Branca" },
+  { id: 16, image: produto17, title: "Churrasqueira Preta" },
 ];
 
 const Products = () => {
