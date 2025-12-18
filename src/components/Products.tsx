@@ -16,6 +16,9 @@ import produto5 from "@/assets/produto-5.jpg";
 import produto6 from "@/assets/produto-6.jpg";
 import produto7 from "@/assets/produto-7.jpg";
 import produto9 from "@/assets/produto-9.jpg";
+import produto10 from "@/assets/produto-10.jpg";
+import produto11 from "@/assets/produto-11.jpg";
+import produto12 from "@/assets/produto-12.jpg";
 
 const products = [
   { id: 1, image: produto1, title: "Caixas Térmicas Personalizadas" },
@@ -26,6 +29,9 @@ const products = [
   { id: 6, image: produto6, title: "Kit Presente Executivo" },
   { id: 7, image: produto7, title: "Kit Sommelier" },
   { id: 8, image: produto9, title: "Kit Churrasco Premium" },
+  { id: 9, image: produto10, title: "Mesa Térmica" },
+  { id: 10, image: produto11, title: "Copos e Garrafas Térmicas" },
+  { id: 11, image: produto12, title: "Churrasqueira Portátil" },
 ];
 
 const Products = () => {
